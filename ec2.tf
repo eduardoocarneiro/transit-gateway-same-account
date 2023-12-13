@@ -72,7 +72,7 @@ resource "aws_network_interface" "vpc-2" {
 
 resource "aws_instance" "ec2_vpc-2" {
   ami           = data.aws_ami.ubuntu_vpc-2.id
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
 
   root_block_device {
     volume_type           = "gp3"
@@ -119,7 +119,7 @@ resource "aws_network_interface" "vpc-3" {
 
 resource "aws_instance" "ec2_vpc-3" {
   ami           = data.aws_ami.ubuntu_vpc-3.id
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
 
   root_block_device {
     volume_type           = "gp3"
