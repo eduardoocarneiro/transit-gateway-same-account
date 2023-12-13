@@ -17,3 +17,7 @@ variable "aws_region" {
 variable "credentials" {
   default = ["~/.aws/credentials"]
 }
+
+variable "instance_type" {
+  default = "t2.micro"
+}
